@@ -1,4 +1,4 @@
-# Hotel-Room-Booking-System
+# Hotel Room Booking System
 
 This is a C++ project created for Computer Programming (CS111) subject.
 
@@ -6,6 +6,6 @@ This is a C++ project created for Computer Programming (CS111) subject.
 - book a room
 - view list of room prices
 - search for rooms details
-- view all booked rooms
-- view all customer records
-  - view total earnings for the day
+- admin
+  - view all booked rooms
+  - view all customer records and total earnings for the day
