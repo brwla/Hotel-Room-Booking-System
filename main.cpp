@@ -18,8 +18,12 @@ public:
 int room[6][5] = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25},{26,27,28,29,30}};
 int rsvroom [6][5];
 
+
 void mainMenu() {
     system("cls");
+    cout << "************************************************\n";
+    cout << "******* HOTEL ROOM BOOKING SYSTEM **************\n";
+    cout << "************************************************\n\n";
     cout << "=========================================\n";
     cout << "========= WELCOME TO OUR HOTEL! =========\n";
     cout << "=========================================\n\n";
@@ -28,7 +32,7 @@ void mainMenu() {
     cout << "3. Book a room\n";
     cout << "4. Search for receipt of booked room\n";
     cout << "5. Exit\n\n";
-    cout << "-----Press the number of the option-----\n--> ";
+    cout << "--Press the number of the option(1-5)--\n--> ";
 }
 
 void adminMenu() {
@@ -44,7 +48,7 @@ void adminMenu() {
 void list() {
     system("cls");
     cout << "These are the type of rooms.\n\n";
-    cout << "---------Hotel rooms---------\n";
+    cout << "---------Hotel Room Prices---------\n";
     cout << "Regular - 1500 pesos per day\n";
     cout << "Deluxe - 2400 pesos per day\n\n";
 }
@@ -52,6 +56,7 @@ void list() {
 void Hotel::bookRoom(){
     system("cls");
     top:
+    cout << "---------Book a Room---------\n";
     cout<<"Enter Room Number: ";
     while (!(cin >> guest[k].roomno) or guest[k].roomno <= 0 || guest[k].roomno > 30) {
         cout << "There are only 30 rooms available in this hotel.\nTry again.\n\n";
@@ -141,6 +146,7 @@ void Hotel::bookRoom(){
 void Hotel::searchRoom() {
     system("cls");
     int roomNoSearch;
+    cout<< "---------Search for receipt of booked room---------\n";
     cout << "Enter room no: ";
     cin >> roomNoSearch;
     for (int v=0; v<=30; v++){
@@ -175,6 +181,7 @@ void Hotel::searchRoom() {
 
 void Hotel::viewAllRooms() {
     system("cls");
+    cout << "==============Check all booked rooms=========\n\n";
     cout << "---Reserved rooms---\n\n";
     cout << "0 means the Room is Taken\n\n";
     for (int i=0; i<6; i++) {
@@ -230,7 +237,7 @@ int main() {
             if (password == "admin") {
                 admenu:
                 adminMenu();
-                choiceagain:cout << "Enter the number of the option:\n--> ";
+                choiceagain:cout << "Enter the number of the option:(1-3)---\n--> ";
                 cin >> choices;
                 switch (choices) {
                     case 1: {
